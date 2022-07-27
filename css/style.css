@@ -11,8 +11,7 @@ body{
 header{
     align-items: center;
     justify-self:center ;
-    grid-area: header;
-    margin-top: 0.5rem;}
+    grid-area: header;}
 .menu{
     background-color:whitesmoke;}
 
@@ -27,7 +26,7 @@ header{
 
 .logo-principal img{
     box-shadow: none;
-    width: 10rem;}
+    width: 9rem;}
 
 .logo-iniciar-sesion img{
     box-shadow: none;
@@ -37,8 +36,13 @@ header{
 .main-index{
     grid-area: main;}
 
-footer{
+.footer-pag{
     grid-area: footer;
+    background-color: #2a2a2a;
+    height: 5rem;
+    margin-top: 2rem;}
+
+.footer-sesion{
     background-color: #2a2a2a;
     height: 5rem;
     margin-top: 2rem;}
@@ -563,9 +567,6 @@ footer h3{
     header{
         justify-content: space-around;}
 
-    .barra-busqueda-input{
-        margin: 0px;}
-
     .logo-iniciar-sesion img{
         max-width: 3rem;
         margin-right: 0px;}
@@ -628,12 +629,6 @@ footer h3{
                             "img-marca-7 img-marca-8" 
                             "img-marca-9 img-marca-10";
         align-items: center;  }
-
-    .barra-busqueda-input{
-        max-width: 40rem;}
-
-    .barra-busqueda{
-        max-width: 20rem;}
 
     .logo-iniciar-sesion{
         max-width: 6rem;
