@@ -5,16 +5,25 @@ margin: 0;
 box-sizing: border-box;}
 
 body{
-    color: #2a2a2a;
     font-family: helvetica-neue-lt,Neue Helvetica VFDP,helvetica,sans-serif;
     letter-spacing: 4px;}
     
 header{
-    display: flex;
     align-items: center;
-    justify-content: space-around; 
+    justify-self:center ;
     grid-area: header;
     margin-top: 0.5rem;}
+.menu{
+    background-color:whitesmoke;}
+
+.nav-item{
+    font-size: 1.2rem;
+    padding: 0 10px 0 10px;}
+
+.boton-nav{
+    color: #000000;
+    border: solid rgb(0, 0, 0) 2px;}
+
 
 .logo-principal img{
     box-shadow: none;
@@ -23,46 +32,6 @@ header{
 .logo-iniciar-sesion img{
     box-shadow: none;
     max-width: 3.125rem;}
- 
-.barra-busqueda-input{
-    padding: 0.93rem;
-    border: 2px solid rgb(38, 36, 36);
-    border-radius: 1.25rem; 
-    height: 2px;
-    margin-right: 1.5rem;
-    width: 50rem;}
-
-.menu{
-    grid-area: nav;
-    justify-self: center;
-    align-self: flex-start;
-    justify-content: center;
-    align-self: flex-start;
-    margin-bottom: 2rem;
-    margin-top: 1rem;
-    max-height: 4.69rem;}
-    
-
-.menu ul li{
-    display: inline-block;
-    padding: 4px;}
-    
-.menu a{   
-    color: black;
-    text-decoration: none;
-    font-size: 1.25rem;
-    padding: 0.75rem 1.25rem;
-    background-color: transparent;
-    border: 1px solid transparent ;
-    border-radius: 0.75rem;
-    }
-    
-.menu ul li a:hover{
-    box-shadow: 0 0 1.25rem 0 black;
-    background-color: #3e3e3e;
-    color: white;
-    padding: 5px 1.25rem;
-    }
 
 
 .main-index{
@@ -87,7 +56,6 @@ footer h3{
     grid-template-rows: auto ;
     position: relative;
     grid-template-areas:"header header header header"
-                        "nav nav nav nav" 
                         "main main main main "
                         "footer footer footer footer " ;
     align-items: center;
@@ -682,21 +650,34 @@ footer h3{
         max-width: 2.5rem;}
 
     .animate__backInLeft{
-        text-align: center;}}
-
-@media screen and (max-width:300px){
-    .barra-busqueda{display: none;}
+        text-align: center;}
     
-    header{
-        justify-content: space-between;}
-    .animate__backInLeft{
-        font-size: 1rem;}
+header{
+    justify-content: space-between;}
     
 }
-.sesion-titulos{
-    font-size: 2rem;}
 
-.sesion-input{
-    display: block;
-    padding:10px 7rem 0 0;
-    text-align: left;}
+.iniciar-sesion-pag {
+       padding: 18% 0 0;
+       margin: 0 auto 100px;
+       max-width: 700px;
+     }
+      
+     .iniciar-sesion-form {
+        box-shadow: 0 0 27px 0 rgba(84, 84, 84, 0.62);
+     }
+      
+     .titulo-iniciar-form {
+        padding-top: 16px;
+     }
+      
+     .iniciar-form {
+        padding-top: 40px;
+        padding-bottom: 40px;
+     }
+      
+     .titulo-form {
+        font-size:30px; 
+        font-weight: bold;
+     }
+    
