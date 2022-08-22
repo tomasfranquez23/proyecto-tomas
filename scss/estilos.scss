@@ -2,6 +2,8 @@
 @import "components/variables.scss";
 @import "components/extend.scss";
 @import "components/variables.scss";
+@import "components/footer";
+@import "components/header";
 
 /* Reset */
 *{
@@ -15,61 +17,13 @@
 /* Index */
 
 .contenedor{
-
-    a{text-decoration: none;}
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto;
     grid-template-areas:"header"
                         "main"
                         "footer";
-
-    .btn{
-        margin:0 2rem;}
-
-    .site-navbar {
-        /* Header */  
-        position: absolute;
-        grid-area: header;
-        margin-bottom: 0;
-        width: 100%;
-        top: 1rem;
-        z-index: 3; 
-
-        .dropdown-menu{
-            background-color: rgb(245, 243, 243);
-            top: 100%;
-            text-align: left;
-            border-top: 2px solid rgb(76, 76, 76);
-            box-shadow: 0 2px 20px -2px rgba(0, 0, 0, 0.387);
-            margin-top: 20px;
-            margin-left: 0px;
-            transition: 0.2s 0s;}
-    
-        .dropdown-item:hover{
-            font-weight: bold;
-            text-decoration: underline black;}
-
-        .logo{
-            color:$secundario;
-            font-size: 23px;
-            letter-spacing: 3px;
-            font-weight: 600;}
-        .home{
-            font-weight: 700;}
-        
-        .nav-link{
-            margin: 0 4px;
-            font-size: 1.2rem;
-            color: $secundario;
-            padding: 0.5rem 20px;
-            text-decoration: none;
-            margin: 0px 15px 0px 15px;}
-    
-        .nav-link:hover{
-            font-weight: 800;
-            color: $secundario;}
-    }
+    a{text-decoration: none;}
 
     .main-index{
         min-height: 100vh;
@@ -80,41 +34,7 @@
 
         .seccion-1{
 
-                .texto-main{
-                    position: absolute;
-                    z-index:2;
-                    padding-top: 24%;
-                    padding-left: 10%;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-                    text-align: left;
-                    margin: auto;
-
-                    @include tablet-sm{
-                        display: none;}
-                    
-                    @include movil{
-                        display: none;}
-
-                    h1{
-                        width: 430px;
-                        color: $secundario;
-                        font-weight: bold;
-                        font-size: 3rem;
-                        font-family: 'Work Sans', sans-serif;
-                        margin: 0.5rem;}
-                        
-                    p{
-                        margin: 0.5rem;
-                        font-size: 1.4rem;
-                        font-weight: 600;
-                        width: 400px;
-                        color: $secundario;
-                        font-family: 'Montserrat', sans-serif;}
-                        
-                }
+                
                 video{
                     top:0%;
                     left: 0%;
@@ -360,121 +280,11 @@
         }
     
     }
-
-    .footer-pag{
-        /* footer */
-
-        grid-area: footer;
-        width: 100%;
-        background-color: rgb(14, 30, 51);
-        margin-top: 12rem;
-
-        .footer-top{
-            width: 100%;
-            max-width: 1200px;
-            margin: auto;
-            display:grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-gap:50px;
-            padding: 45px 0px;
-            
-            @include movil{
-                width: 90%;
-                grid-template-columns: repeat(1, 1fr);
-                grid-gap:30px;
-                padding: 35px 0px;
-                }
-        
-
-            .seccion-footer{
-
-                h2,h3,h4{
-                    text-decoration: none;
-                    color: rgb(255, 255, 255);
-                    margin-bottom: 25px;
-                    font-size: 20px;
-                    }
-                p{
-                    color: #efefef;
-                    margin-bottom: 10px;
-                    }
-
-                .red-social a{
-                    display: inline-block;
-                    text-decoration: none;
-                    width: 45px;
-                    height: 45px;
-                    line-height: 45px;
-                    color: rgb(255, 255, 255);
-                    margin-right: 10px;
-                    background-color: rgb(21, 45, 71);
-                    text-align:center;
-                    transition: 0.6s;
-                    border-radius: 90%;}
-
-                .red-social a:hover{
-                    color: rgb(206, 206, 206);
-                    background-color: rgb(6, 154, 227);}
-            }
-        }
-            .derechos{
-                    background-color: rgb(11, 26, 44);
-                    padding: 15px 10px;
-                    text-align: center;
-                    color: $secundario;
-                 p{
-                    font-size: 15px;}
-            
-            }  
-    }   
     /* Fin del index */
 
     /* Pag */
 
-    .nav{
-        padding: 10px 0 10px 0;
-        grid-area: header;
-        margin-bottom: 0;
-        width: 100%;
-        margin: 0 0 5rem 0;
-        background-color: #252424;
-
-        .dropdown-menu{
-            background-color: rgb(245, 243, 243);
-            top: 100%;
-            text-align: left;
-            border-top: 2px solid rgb(76, 76, 76);
-            box-shadow: 0 2px 20px -2px rgba(0, 0, 0, 0.387);
-            margin-top: 20px;
-            margin-left: 0px;
-            transition: 0.2s 0s;}
     
-        .dropdown-item:hover{
-            font-weight: bold;
-            text-decoration: underline black;}
-
-        .logo{
-            color: $secundario;
-            font-size: 23px;
-            letter-spacing: 3px;
-            font-weight: 600;}
-
-        .home{
-            color: $secundario;
-            font-weight: 700;}
-        
-        .nav-link{
-            margin: 0 4px;
-            font-size: 1.2rem;
-            color: $secundario;
-            padding: 0.5rem 20px;
-            text-decoration: none;
-            margin: 0px 15px 0px 15px;}
-    
-        .nav-link:hover{
-            color: $secundario;
-            font-weight: 800;}
-        }
 
     .main-pag{
         grid-area: main;
@@ -614,9 +424,8 @@
         .img-top{
             grid-area: imgTop;
             img{
-                width: 120%;
-              
-              min-height:40vh;
+                width: 100%;
+                min-height:40vh;
                 }
             }
 
@@ -752,19 +561,7 @@
 
 .body-sesion{
     background: rgb(55,145,209);
-    color: $secundario;
-    .footer-sesion{
-        .derechos{
-            background-color: #010d2b;
-                padding: 15px 10px;
-                text-align: center;
-                color: $secundario;
-        p{
-            font-size: 15px;}
-            
-            }  
-        }
-        
+    color: $secundario;    
         
 .form{
     background: rgb(55,145,209);
@@ -783,5 +580,4 @@
         text-decoration: none;}
 
     }
-
 
