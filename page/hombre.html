@@ -25,9 +25,13 @@
     <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
    
     <!-- CSS -->
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script src="https://kit.fontawesome.com/df59baf6b8.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <!-- Keywords -->
     <meta name="author" content="tomas franquez">
     <meta name="descripcion" content="Calzado, buzos, camperas, pantalones para hombre ">
@@ -69,8 +73,9 @@
                             </ul>
                         </div>
                         <a class="btn btn-primary" type="button" href="sesion.html">Cuenta</a>
-                        <a href=""></a>
+                        
                     </div>
+                    <button id="boton-carrito"><i class="fas fa-shopping-cart"></i><span id="contadorCarrito">0</span></button>
                 </nav>
             </div>
         </header >
@@ -126,10 +131,26 @@
                      </ul>
                 </div>
             </section>
+            
             <div id="contenedor-productos" class="row row-cols-1 row-cols-md-3 row-cols-lg-4
                     row-cols-sm-3 g-4">
             <!-- AGREGAR PRODUCTOS -->
                 
+            </div>
+            <div class="modal-contenedor">
+                <div class="modal-carrito">
+                    <h3>Carrito</h3>
+                    <button id="carritoCerrar"><i class="fas fa-times-circle"></i></button>
+                    <div id="carrito-contenedor">
+                        <!-- <div class="productoEnCarrito">
+                            <p>producto</p>
+                            <p>Precio</p>
+                            <button class="boton-eliminar"><i class="fas fa-trash-alt"></i></button>
+                        </div> -->
+                    </div>
+                    <p class="precioProducto">Precio total: $<span id="precioTotal">0</span></p>
+                    <button id="vaciar-carrito" class="boton-agregar">Vaciar carrito</button>
+                </div>
             </div>
         </main>
         <!-- Footer -->
@@ -164,7 +185,9 @@
     </div>
     <!-- JavaScript Bundle with Popper -->
     <script src="../products.js"></script>
-    <script src="../app.js"></script>
+    <script defer src="../modal.js"></script>
+    <script defer src="../app.js"></script>
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 </body>
 </html>
