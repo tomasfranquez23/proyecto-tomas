@@ -44,6 +44,12 @@ stockProductos.forEach(producto => {
     boton.addEventListener('click', () => {
        //esta funcion ejecuta el agregar el carrito con la id del producto
         agregarAlCarrito(producto.id)
+        //Aparezca un aviso que se agrego al carrito
+        Swal.fire({
+            icon: 'success',
+            title: 'Excelente!',
+            text: `Se agrego correctamente ${producto.nombre} al carrito`
+          })
     })
 })
 
