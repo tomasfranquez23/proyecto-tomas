@@ -1,3 +1,151 @@
+#boton-carrito {
+  width: 80px;
+  border: none;
+  color: rgb(255, 255, 255);
+  font-size: 30px;
+  background-color: transparent;
+  border-radius: 10%;
+  margin: 0;
+  transition: all .3s;
+}
+#boton-carrito:hover {
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  background-color: rgb(43, 84, 205);
+}
+#boton-carrito:focus {
+  outline: none;
+}
+
+#contenedor-productos {
+  max-width: 1200px;
+  margin: 60px auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+p {
+  line-height: 1.8;
+}
+.producto {
+  max-width: 20%;
+  padding: 10px;
+  margin: 10px;
+  margin-bottom: 20px;
+  box-shadow: 2px 6px 3px 3px rgba(0, 0, 0, 0.3);
+}
+.precioProducto {
+  font-weight: 700;
+}
+.boton-agregar {
+  background-color: royalblue;
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 5px;
+  border: none;
+}
+.boton-agregar:hover {
+  cursor: pointer;
+}
+.boton-agregar:focus {
+  outline: none;
+}
+
+.modal-contenedor {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all .5s;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.modal-active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-carrito {
+  position: relative;
+  background-color: white;
+  min-width: 500px;
+  padding: 20px;
+  margin-top: -100%;
+  transition: all .5s;
+}
+
+.modal-active .modal-carrito {
+  margin-top: 0;
+}
+
+.modal-carrito h3 {
+  color: royalblue;
+  padding-bottom: 5px;
+}
+.modal-carrito #carritoCerrar {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 20px;
+  color: royalblue;
+  border: none;
+  background-color: white;
+}
+.modal-carrito #carritoCerrar:hover {
+  cursor: pointer;
+}
+.modal-carrito #carritoCerrar:focus {
+  outline: none;
+}
+.modal-carrito .precioProducto {
+  padding-top: 10px;
+  
+}
+
+.productoEnCarrito {
+  border-left: 5px solid lightblue;
+  border-bottom-left-radius: 3px;
+  border-top-left-radius: 3px;
+  margin: 5px 0;
+  padding: 5px 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.productoEnCarrito:hover {
+  border-left: 5px solid royalblue;
+}
+
+.boton-eliminar {
+  background-color: white;
+  color: red;
+  border: none;
+  font-size: 20px;
+}
+
+.boton-eliminar:hover {
+  cursor: pointer;
+}
+.boton-eliminar:focus {
+  outline: none;
+}
+
+
+
+
+
+
+
+.navbar{
+  justify-content: center;}
+
+
 .titulos {
   font-size: 27px;
   font-weight: bold;
@@ -157,7 +305,9 @@
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: auto;
-  grid-template-areas: "header" "main" "footer";
+  grid-template-areas: "header"
+ "main"
+ "footer";
   /* Fin del index */
   /* Pag */
   /* Marca */
@@ -191,7 +341,9 @@
       grid-template-columns: 1fr auto auto 1fr;
       grid-template-rows: auto auto auto;
       position: relative;
-      grid-template-areas: "texto texto texto texto" "img1 img1 img2 img2" "img3 img4 img5 img6"; }
+      grid-template-areas: "texto texto texto texto"
+ "img1 img1 img2 img2"
+ "img3 img4 img5 img6"; }
       @media screen and (max-width: 900px) {
         .contenedor .main-index .seccion-2 {
           gap: 1rem; } }
@@ -202,7 +354,13 @@
           grid-template-columns: 1fr;
           grid-template-rows: auto;
           position: relative;
-          grid-template-areas: "texto" "img1" "img2" "img3" "img4" "img5" "img6";
+          grid-template-areas: "texto"
+ "img1"
+ "img2"
+ "img3"
+ "img4"
+ "img5"
+ "img6";
           align-items: center;
           justify-content: center; } }
       .contenedor .main-index .seccion-2 .seccion-texto {
@@ -430,17 +588,32 @@
     grid-template-columns: auto;
     grid-template-rows: auto;
     position: relative;
-    grid-template-areas: "imgTop imgTop imgTop imgTop imgTop" "titulo titulo titulo titulo titulo" "img-marca-1 img-marca-2 img-marca-3 img-marca-4 img-marca-5 " "img-marca-6 img-marca-7 img-marca-8 img-marca-9 img-marca-10"; }
+    grid-template-areas: "imgTop imgTop imgTop imgTop imgTop"
+ "titulo titulo titulo titulo titulo"
+ "img-marca-1 img-marca-2 img-marca-3 img-marca-4 img-marca-5 "
+ "img-marca-6 img-marca-7 img-marca-8 img-marca-9 img-marca-10"; }
     @media screen and (max-width: 1200px) {
       .contenedor .main-marca {
         grid-template-rows: auto;
         position: relative;
-        grid-template-areas: "imgTop  imgTop" "titulo titulo " "img-marca-1 img-marca-2" "img-marca-3 img-marca-4" "img-marca-5 img-marca-6" "img-marca-7 img-marca-8"  "img-marca-9 img-marca-10"; } }
+        grid-template-areas: "imgTop  imgTop"
+ "titulo titulo "
+ "img-marca-1 img-marca-2"
+ "img-marca-3 img-marca-4"
+ "img-marca-5 img-marca-6"
+ "img-marca-7 img-marca-8" 
+ "img-marca-9 img-marca-10"; } }
     @media screen and (max-width: 600px) {
       .contenedor .main-marca {
         grid-template-rows: auto;
         position: relative;
-        grid-template-areas: "imgTop  imgTop" "titulo titulo " "img-marca-1 img-marca-2" "img-marca-3 img-marca-4" "img-marca-5 img-marca-6" "img-marca-7 img-marca-8"  "img-marca-9 img-marca-10";
+        grid-template-areas: "imgTop  imgTop"
+ "titulo titulo "
+ "img-marca-1 img-marca-2"
+ "img-marca-3 img-marca-4"
+ "img-marca-5 img-marca-6"
+ "img-marca-7 img-marca-8" 
+ "img-marca-9 img-marca-10";
         align-items: center; } }
     .contenedor .main-marca .img-top {
       grid-area: imgTop; }
@@ -510,7 +683,8 @@
       position: relative;
       grid-template-columns: 0.5fr auto;
       grid-template-rows: auto;
-      grid-template-areas: "h1 h2" "parrafo mapa"; }
+      grid-template-areas: "h1 h2"
+ "parrafo mapa"; }
       .contenedor .main-nosotros .nosotros .mapa {
         justify-self: center;
         grid-area: mapa; }
@@ -535,7 +709,10 @@
           position: relative;
           grid-template-columns: auto;
           grid-template-rows: auto;
-          grid-template-areas: "h1" "parrafo" "h2" "mapa"; } }
+          grid-template-areas: "h1"
+ "parrafo"
+ "h2"
+ "mapa"; } }
 
 .body-sesion {
   background: #3791d1;
