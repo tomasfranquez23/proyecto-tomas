@@ -74,14 +74,12 @@ registrarse.addEventListener("click", () => {
         </div>
         <button type="submit" class="btn btn-primary w-100" id="boton-sesion">Registrarse</button>
       </form>
-      <div class="d-flex justify-content-around"> 
-          <button id="Iniciar Sesion" class="btn btn-primary w-50 mr-2 flex-grow-1" >Iniciar Sesion</button>
-          <button id="recuperarPassword" class="btn btn-primary w-50 mr-2 flex-grow-1" >Recuperar Contraseña</button>
-        </div>
     <p class="font-weight-bold text-center ">O inicia sesión con</p>
     <div class="d-flex justify-content-around">
+        <button type="button" class="btn btn-outline-light flex-grow-1 mr-2"><i class="fab fa-google lead mr-2"></i> Google</button>
+        <button type="button" class="btn btn-outline-light flex-grow-1 ml-2"><i class="fab fa-facebook-f lead mr-2"></i> Facebook</button>
     </div>
-    </div>
+    
 </div>
 </div>
 </section>`;
