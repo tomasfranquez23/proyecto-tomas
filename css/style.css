@@ -620,10 +620,10 @@ p {
   display: grid;
   gap: 2rem;
   margin: 4rem;
-  grid-template-columns: 0.5fr 5fr;
+  grid-template-columns: 1fr;
   grid-template-rows: auto;
   position: relative;
-  grid-template-areas: " sidebar row";
+  grid-template-areas: "row";
   align-items: center;
   justify-content: center;
 }
@@ -948,4 +948,8 @@ p {
 .btn{
     display: flex;
     margin: 20px auto;
+}
+
+.main-marca{
+    top: 80px;
 }
