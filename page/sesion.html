@@ -8,7 +8,6 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@300;600&display=swap" rel="stylesheet">
@@ -25,8 +24,8 @@
 <body class="body-sesion">
   <!-- Main -->
     <main>
-      <section>
-        <div class="row g-0">
+      <section id="seccion">
+        <div id="div" class="row g-0 ">
             <div class="col-lg-6 d-none d-lg-block">
                 <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
                     <ol class="carousel-indicators">
@@ -69,11 +68,17 @@
                     </div>
                     <div class="mb-4">
                       <label for="exampleInputPassword1" class="form-label font-weight-bold">Contraseña</label>
-                      <input type="password" class="form-control bg-dark-x border-0 mb-2" placeholder="Ingresa tu contraseña" id="password">
-
+                      <input type="password" class="form-control bg-dark-x border-0 mb-2" placeholder="Ingresa tu contraseña" id="formPassword">
+                      
                     </div>
                     <button type="submit" class="btn btn-primary w-100" id="boton-sesion">Iniciar sesión</button>
                   </form>
+                  <div class="d-flex justify-content-around"> 
+                    <button id="registrarse" class="btn btn-primary w-50 mr-2 flex-grow-1" id="boton-sesion">Registrarse</button>
+                  <button id="recuperarPassword" class="btn btn-primary w-50
+                  mr-2 flex-grow-1" id="boton-sesion">Recuperar Contraseña</button>
+                  </div>
+                  
                 <p class="font-weight-bold text-center ">O inicia sesión con</p>
                 <div class="d-flex justify-content-around">
                     <button type="button" class="btn btn-outline-light flex-grow-1 mr-2"><i class="fab fa-google lead mr-2"></i> Google</button>
@@ -94,8 +99,16 @@
             </div>
         </footer>
     <!--JavaScript -->
-    <script src="../sesion.js"></script>
+    <script src="../js/sesion.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+
+    <script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+<script type="text/javascript">
+  emailjs.init('eqIgBaLQVx65w4r1H')</script>
+<script src="../js/email.js"></script>
 </body>
 </html>
+
