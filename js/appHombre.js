@@ -27,7 +27,7 @@ botonVaciar.addEventListener('click', () => {
     //INYECTA EL HTML DESDE EL FETCH
 
 
-    fetch('../stockProductos/productosAccesorios.json')
+    fetch('../stockProductos/productosHombre.json')
         .then(respuesta => respuesta.json())
         .then(data => {
             data.forEach(producto => {
